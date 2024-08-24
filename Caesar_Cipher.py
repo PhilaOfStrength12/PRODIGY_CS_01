@@ -32,30 +32,17 @@ def main():
     print()
     print("Caesar Cipher Program")
     print()
-    print("1. Encrypt")
-    print("2. Decrypt")
-    
-    choice = input("Enter your choice: ")
+    message = input("Enter the message to encrypt: ")
+    shift = int(input("Enter the shift value: "))
 
-    if choice == '1':
-        message = input("Enter the message to encrypt: ")
-        shift = int(input("Enter the shift value: "))
-        encrypted_message = caesar_cipher_encrypt(message, shift)
-        print()
-        print(f"Encrypted message: {encrypted_message}")
-        print()
-
-    elif choice == '2':
-        message = input("Enter the message to decrypt: ")
-        shift = int(input("Enter the shift value: "))
-        decrypted_message = caesar_cipher_decrypt(message, shift)
-        print()
-        print(f"Decrypted message: {decrypted_message}")
-        print()
-        
-    else:
-        print("Invalid choice, program will exit.")
-        print()
+    encrypted_message = caesar_cipher_encrypt(message, shift)
+    print()
+    print(f"Encrypted message: {encrypted_message}")
+    decrypted_message = caesar_cipher_decrypt(message, shift)
+    print()
+    print(f"Decrypted message: {decrypted_message}")
+    print() 
+   
         
 if __name__ == "__main__":
     main()
