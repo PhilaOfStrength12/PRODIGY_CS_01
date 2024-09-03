@@ -38,7 +38,7 @@ def main():
     encrypted_message = caesar_cipher_encrypt(message, shift)
     print()
     print(f"Encrypted message: {encrypted_message}")
-    decrypted_message = caesar_cipher_decrypt(message, shift)
+    decrypted_message = caesar_cipher_decrypt(encrypted_message, shift)
     print()
     print(f"Decrypted message: {decrypted_message}")
     print() 
